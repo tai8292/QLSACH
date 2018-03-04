@@ -41,6 +41,16 @@ namespace QLSACH
             return ketQua;
         }
 
+        public int ExeNoQuery(string sql,SqlParameter param)
+        {
+            Open();
+            SqlCommand comm = new SqlCommand(sql, conn);
+            comm.Parameters.Add(param);
+            int ketQua = comm.ExecuteNonQuery();
+            Close();
+            return ketQua;
+        }
+
         public DataTable GetDataTable(string sql)
         {
             SqlDataAdapter da = new SqlDataAdapter(sql, conn);

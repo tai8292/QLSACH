@@ -20,7 +20,7 @@ namespace QLSACH
 
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
-            Application.Run(new FrmThemSach());
+            Application.Run(new FrmMain());
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -30,13 +31,19 @@ namespace QLSACH
             this.Close();
         }
 
-        private void btnNhapLai_Click(object sender, EventArgs e)
+        public void Clear()
         {
+            this.txtMaSach.Clear();
             this.txtTenSach.Clear();
             this.txtTacGia.Clear();
             this.txtMoTa.Clear();
 
             this.txtMaSach.Focus();
+        }
+
+        private void btnNhapLai_Click(object sender, EventArgs e)
+        {
+            Clear();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -49,10 +56,14 @@ namespace QLSACH
             string moTa = this.txtMoTa.Text.ToString();
             string nhaXuatBan = this.cbNhaXuatBan.SelectedValue.ToString();
             string ngayXuatBan = this.ngayXuatBan.Value.ToString();
-            byte[] anh = anhSangByte(this.hinhAnh.Image);
+            byte[] anh = LopDungChung.anhSangByte(this.hinhAnh.Image);
 
-            string sql = "insert into SACH(MaSach,TenSach,TacGia,NgayXuatBan,MaNhaXuatBan,HinhAnh,MoTa) values('" + maSach + "','" + tenSach + "','"+tacGia+"','" + ngayXuatBan + "','" + nhaXuatBan + "','" + Convert.ToBase64String(anh) + "','" + moTa + "')";
-            dp.ExeNoQuery(sql);
+            SqlParameter param = new SqlParameter();
+            param.ParameterName = "@HinhAnh";
+            param.Value = anh;
+        
+            string sql = "insert into SACH values('" + maSach + "',N'" + tenSach + "',N'"+tacGia+"','" + ngayXuatBan + "','" + nhaXuatBan + "',@HinhAnh,N'" + moTa + "')";
+            dp.ExeNoQuery(sql,param);
 
             //get the loai
             List<string> listTheLoai = new List<string>();
@@ -64,6 +75,8 @@ namespace QLSACH
                 sql = "insert into LOAISACH values('" + maSach + "','" + listTheLoai[i] + "')";
                 dp.ExeNoQuery(sql);
             }
+            Clear();
+            MessageBox.Show("THêm sách thành công");
         }
 
         private void FrmThemSach_Load(object sender, EventArgs e)
@@ -80,13 +93,6 @@ namespace QLSACH
             this.lbTheLoai.DataSource = dt;
             this.lbTheLoai.ValueMember = "MaLoaiSach";
             this.lbTheLoai.DisplayMember = "TenTheLoai";
-        }
-
-        public byte[] anhSangByte(Image hinhAnh)
-        {
-            MemoryStream ms = new MemoryStream();
-            hinhAnh.Save(ms, System.Drawing.Imaging.ImageFormat.Bmp);
-            return ms.ToArray();
         }
     }
 }

@@ -29,77 +29,78 @@
         private void InitializeComponent()
         {
             this.pnMain = new DevExpress.XtraEditors.PanelControl();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.lbTieuDe = new System.Windows.Forms.Label();
+            this.pnTacGia = new System.Windows.Forms.Panel();
             this.lbTacGia = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnTenSach = new System.Windows.Forms.Panel();
             this.lbTenSach = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnChiTiet = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
-            this.picBook = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayXuatBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgSach = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sáchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhàXuấtBảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thểLoạiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HinhAnh = new System.Windows.Forms.DataGridViewImageColumn();
+            this.lbMaSach = new System.Windows.Forms.Label();
+            this.picBook = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pnMain)).BeginInit();
             this.pnMain.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBook)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.pnTacGia.SuspendLayout();
+            this.pnTenSach.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgSach)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBook)).BeginInit();
             this.SuspendLayout();
             // 
             // pnMain
             // 
-            this.pnMain.Controls.Add(this.label2);
-            this.pnMain.Controls.Add(this.panel2);
-            this.pnMain.Controls.Add(this.panel1);
+            this.pnMain.Controls.Add(this.lbTieuDe);
+            this.pnMain.Controls.Add(this.pnTacGia);
+            this.pnMain.Controls.Add(this.pnTenSach);
             this.pnMain.Controls.Add(this.btnXoa);
             this.pnMain.Controls.Add(this.btnChiTiet);
             this.pnMain.Controls.Add(this.btnThem);
             this.pnMain.Controls.Add(this.picBook);
-            this.pnMain.Controls.Add(this.dataGridView1);
+            this.pnMain.Controls.Add(this.dgSach);
             this.pnMain.Location = new System.Drawing.Point(12, 30);
             this.pnMain.Name = "pnMain";
             this.pnMain.Size = new System.Drawing.Size(920, 531);
             this.pnMain.TabIndex = 0;
             // 
-            // label2
+            // lbTieuDe
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 25F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.Blue;
-            this.label2.Location = new System.Drawing.Point(113, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(421, 41);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Phầm mền quản lý sách";
+            this.lbTieuDe.AutoSize = true;
+            this.lbTieuDe.Font = new System.Drawing.Font("Tahoma", 25F, System.Drawing.FontStyle.Bold);
+            this.lbTieuDe.ForeColor = System.Drawing.Color.Blue;
+            this.lbTieuDe.Location = new System.Drawing.Point(113, 13);
+            this.lbTieuDe.Name = "lbTieuDe";
+            this.lbTieuDe.Size = new System.Drawing.Size(421, 41);
+            this.lbTieuDe.TabIndex = 7;
+            this.lbTieuDe.Text = "Phầm mền quản lý sách";
             // 
-            // panel2
+            // pnTacGia
             // 
-            this.panel2.Controls.Add(this.lbTacGia);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(644, 422);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(246, 31);
-            this.panel2.TabIndex = 6;
+            this.pnTacGia.Controls.Add(this.lbTacGia);
+            this.pnTacGia.Controls.Add(this.label4);
+            this.pnTacGia.Location = new System.Drawing.Point(644, 422);
+            this.pnTacGia.Name = "pnTacGia";
+            this.pnTacGia.Size = new System.Drawing.Size(246, 31);
+            this.pnTacGia.TabIndex = 6;
             // 
             // lbTacGia
             // 
             this.lbTacGia.AutoSize = true;
-            this.lbTacGia.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.lbTacGia.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.lbTacGia.Location = new System.Drawing.Point(86, 7);
             this.lbTacGia.Name = "lbTacGia";
-            this.lbTacGia.Size = new System.Drawing.Size(48, 17);
+            this.lbTacGia.Size = new System.Drawing.Size(53, 17);
             this.lbTacGia.TabIndex = 1;
             this.lbTacGia.Text = "tác giả";
             // 
@@ -113,22 +114,23 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Tác giả : ";
             // 
-            // panel1
+            // pnTenSach
             // 
-            this.panel1.Controls.Add(this.lbTenSach);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(644, 385);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(246, 31);
-            this.panel1.TabIndex = 5;
+            this.pnTenSach.Controls.Add(this.lbMaSach);
+            this.pnTenSach.Controls.Add(this.lbTenSach);
+            this.pnTenSach.Controls.Add(this.label1);
+            this.pnTenSach.Location = new System.Drawing.Point(644, 385);
+            this.pnTenSach.Name = "pnTenSach";
+            this.pnTenSach.Size = new System.Drawing.Size(246, 31);
+            this.pnTenSach.TabIndex = 5;
             // 
             // lbTenSach
             // 
             this.lbTenSach.AutoSize = true;
-            this.lbTenSach.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.lbTenSach.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.lbTenSach.Location = new System.Drawing.Point(86, 7);
             this.lbTenSach.Name = "lbTenSach";
-            this.lbTenSach.Size = new System.Drawing.Size(36, 17);
+            this.lbTenSach.Size = new System.Drawing.Size(39, 17);
             this.lbTenSach.TabIndex = 1;
             this.lbTenSach.Text = "sách";
             // 
@@ -151,6 +153,7 @@
             this.btnXoa.Size = new System.Drawing.Size(89, 35);
             this.btnXoa.TabIndex = 4;
             this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnChiTiet
             // 
@@ -161,6 +164,7 @@
             this.btnChiTiet.Size = new System.Drawing.Size(89, 35);
             this.btnChiTiet.TabIndex = 3;
             this.btnChiTiet.Text = "Xem chi tiết";
+            this.btnChiTiet.Click += new System.EventHandler(this.btnChiTiet_Click);
             // 
             // btnThem
             // 
@@ -180,57 +184,21 @@
             this.btnThem.Text = "Thêm mới sách";
             this.btnThem.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // picBook
+            // dgSach
             // 
-            this.picBook.Image = global::QLSACH.Properties.Resources.book;
-            this.picBook.Location = new System.Drawing.Point(644, 108);
-            this.picBook.Name = "picBook";
-            this.picBook.Size = new System.Drawing.Size(246, 258);
-            this.picBook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBook.TabIndex = 1;
-            this.picBook.TabStop = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaSach,
             this.TenSach,
             this.TacGia,
-            this.NgayXuatBan});
-            this.dataGridView1.Location = new System.Drawing.Point(16, 57);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(611, 467);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // MaSach
-            // 
-            this.MaSach.HeaderText = "Mã sách";
-            this.MaSach.Name = "MaSach";
-            this.MaSach.ReadOnly = true;
-            this.MaSach.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // TenSach
-            // 
-            this.TenSach.HeaderText = "Tên sách";
-            this.TenSach.Name = "TenSach";
-            this.TenSach.ReadOnly = true;
-            this.TenSach.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // TacGia
-            // 
-            this.TacGia.HeaderText = "Tác giả";
-            this.TacGia.Name = "TacGia";
-            this.TacGia.ReadOnly = true;
-            this.TacGia.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // NgayXuatBan
-            // 
-            this.NgayXuatBan.HeaderText = "Ngày xuất bản";
-            this.NgayXuatBan.Name = "NgayXuatBan";
-            this.NgayXuatBan.ReadOnly = true;
-            this.NgayXuatBan.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.HinhAnh});
+            this.dgSach.Location = new System.Drawing.Point(16, 57);
+            this.dgSach.Name = "dgSach";
+            this.dgSach.RowHeadersWidth = 30;
+            this.dgSach.Size = new System.Drawing.Size(611, 467);
+            this.dgSach.TabIndex = 0;
+            this.dgSach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgSach_CellClick);
             // 
             // menuStrip1
             // 
@@ -250,6 +218,7 @@
             this.sáchToolStripMenuItem.Name = "sáchToolStripMenuItem";
             this.sáchToolStripMenuItem.Size = new System.Drawing.Size(49, 23);
             this.sáchToolStripMenuItem.Text = "&Sách";
+            this.sáchToolStripMenuItem.Click += new System.EventHandler(this.sáchToolStripMenuItem_Click);
             // 
             // nhàXuấtBảnToolStripMenuItem
             // 
@@ -263,6 +232,56 @@
             this.thểLoạiToolStripMenuItem.Size = new System.Drawing.Size(68, 23);
             this.thểLoạiToolStripMenuItem.Text = "&Thể loại";
             // 
+            // MaSach
+            // 
+            this.MaSach.DataPropertyName = "MaSach";
+            this.MaSach.HeaderText = "Mã sách";
+            this.MaSach.Name = "MaSach";
+            this.MaSach.ReadOnly = true;
+            // 
+            // TenSach
+            // 
+            this.TenSach.DataPropertyName = "TenSach";
+            this.TenSach.HeaderText = "Tên sách";
+            this.TenSach.Name = "TenSach";
+            this.TenSach.ReadOnly = true;
+            // 
+            // TacGia
+            // 
+            this.TacGia.DataPropertyName = "TacGia";
+            this.TacGia.HeaderText = "Tác giả";
+            this.TacGia.Name = "TacGia";
+            this.TacGia.ReadOnly = true;
+            // 
+            // HinhAnh
+            // 
+            this.HinhAnh.DataPropertyName = "HinhAnh";
+            this.HinhAnh.HeaderText = "Hình ảnh";
+            this.HinhAnh.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.HinhAnh.Name = "HinhAnh";
+            this.HinhAnh.ReadOnly = true;
+            // 
+            // lbMaSach
+            // 
+            this.lbMaSach.AutoSize = true;
+            this.lbMaSach.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.lbMaSach.Location = new System.Drawing.Point(131, 7);
+            this.lbMaSach.Name = "lbMaSach";
+            this.lbMaSach.Size = new System.Drawing.Size(39, 17);
+            this.lbMaSach.TabIndex = 2;
+            this.lbMaSach.Text = "sách";
+            this.lbMaSach.Visible = false;
+            // 
+            // picBook
+            // 
+            this.picBook.Image = global::QLSACH.Properties.Resources.book;
+            this.picBook.Location = new System.Drawing.Point(644, 108);
+            this.picBook.Name = "picBook";
+            this.picBook.Size = new System.Drawing.Size(246, 258);
+            this.picBook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBook.TabIndex = 1;
+            this.picBook.TabStop = false;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -274,17 +293,18 @@
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMain";
+            this.Load += new System.EventHandler(this.FrmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pnMain)).EndInit();
             this.pnMain.ResumeLayout(false);
             this.pnMain.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBook)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.pnTacGia.ResumeLayout(false);
+            this.pnTacGia.PerformLayout();
+            this.pnTenSach.ResumeLayout(false);
+            this.pnTenSach.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgSach)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBook)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,22 +316,23 @@
         private DevExpress.XtraEditors.SimpleButton btnChiTiet;
         private DevExpress.XtraEditors.SimpleButton btnThem;
         private System.Windows.Forms.PictureBox picBook;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TacGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayXuatBan;
+        private System.Windows.Forms.DataGridView dgSach;
         private DevExpress.XtraEditors.SimpleButton btnXoa;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lbTieuDe;
+        private System.Windows.Forms.Panel pnTacGia;
         private System.Windows.Forms.Label lbTacGia;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnTenSach;
         private System.Windows.Forms.Label lbTenSach;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem sáchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nhàXuấtBảnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thểLoạiToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenSach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TacGia;
+        private System.Windows.Forms.DataGridViewImageColumn HinhAnh;
+        private System.Windows.Forms.Label lbMaSach;
     }
 }

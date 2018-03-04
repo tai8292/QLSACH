@@ -71,6 +71,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataProvider.cs" />
+    <Compile Include="FrmChiTietSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChiTietSach.Designer.cs">
+      <DependentUpon>FrmChiTietSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,8 +89,12 @@
     <Compile Include="FrmThemSach.Designer.cs">
       <DependentUpon>FrmThemSach.cs</DependentUpon>
     </Compile>
+    <Compile Include="LopDungChung.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmChiTietSach.resx">
+      <DependentUpon>FrmChiTietSach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
