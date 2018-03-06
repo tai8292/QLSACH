@@ -14,6 +14,7 @@ namespace QLSACH
 {
     public partial class FrmThemSach : Form
     {
+        bool trangThai = false;
         public FrmThemSach()
         {
             InitializeComponent();
@@ -58,25 +59,49 @@ namespace QLSACH
             string ngayXuatBan = this.ngayXuatBan.Value.ToString();
             byte[] anh = LopDungChung.anhSangByte(this.hinhAnh.Image);
 
-            SqlParameter param = new SqlParameter();
-            param.ParameterName = "@HinhAnh";
-            param.Value = anh;
-        
-            string sql = "insert into SACH values('" + maSach + "',N'" + tenSach + "',N'"+tacGia+"','" + ngayXuatBan + "','" + nhaXuatBan + "',@HinhAnh,N'" + moTa + "')";
-            dp.ExeNoQuery(sql,param);
-
-            //get the loai
-            List<string> listTheLoai = new List<string>();
-            foreach (DataRowView i in this.lbTheLoai.SelectedItems)
-                listTheLoai.Add(i["MaLoaiSach"].ToString());
-
-            for(int i=0;i<listTheLoai.Count;i++)
+            if (dp.ExeScalar("select count(*) from SACH where MaSach ='" + maSach + "'") == 1)
             {
-                sql = "insert into LOAISACH values('" + maSach + "','" + listTheLoai[i] + "')";
-                dp.ExeNoQuery(sql);
+                MessageBox.Show("Mã sách đã tồn tài");
             }
-            Clear();
-            MessageBox.Show("THêm sách thành công");
+            else
+            {
+                if (txtMaSach.Text == "")
+                {
+                    MessageBox.Show("Mã sách không được để trống");
+                }
+                else
+                {
+                    if (txtTenSach.Text == "")
+                    {
+                        MessageBox.Show("Tên sách không được để trống");
+                    }
+                    else
+                    {
+                        SqlParameter param = new SqlParameter();
+                        param.ParameterName = "@HinhAnh";
+                        param.Value = anh;
+
+                        string sql = "insert into SACH values('" + maSach + "',N'" + tenSach + "',N'" + tacGia + "','" + ngayXuatBan + "','" + nhaXuatBan + "',@HinhAnh,N'" + moTa + "')";
+                        dp.ExeNoQuery(sql, param);
+
+                        //get the loai
+                        List<string> listTheLoai = new List<string>();
+                        foreach (DataRowView i in this.lbTheLoai.SelectedItems)
+                            listTheLoai.Add(i["MaLoaiSach"].ToString());
+
+                        for (int i = 0; i < listTheLoai.Count; i++)
+                        {
+                            sql = "insert into LOAISACH values('" + maSach + "','" + listTheLoai[i] + "')";
+                            dp.ExeNoQuery(sql);
+                        }
+                        Clear();
+                        trangThai = true;
+                        MessageBox.Show("THêm sách thành công");
+                        this.Close();
+                    }
+                }
+            }
+            
         }
 
         private void FrmThemSach_Load(object sender, EventArgs e)
@@ -93,6 +118,20 @@ namespace QLSACH
             this.lbTheLoai.DataSource = dt;
             this.lbTheLoai.ValueMember = "MaLoaiSach";
             this.lbTheLoai.DisplayMember = "TenTheLoai";
+        }
+
+        private void btnDong_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FrmThemSach_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (trangThai == false)
+            {
+                if (MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                    e.Cancel = true;
+            }
         }
     }
 }

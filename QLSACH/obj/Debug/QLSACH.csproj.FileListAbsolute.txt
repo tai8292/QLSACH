@@ -62,3 +62,6 @@ C:\Users\Window 10\source\repos\QLSACH\QLSACH\bin\Debug\ja\DevExpress.XtraLayout
 C:\Users\Window 10\source\repos\QLSACH\QLSACH\bin\Debug\ru\DevExpress.XtraLayout.v17.2.resources.dll
 C:\Users\Window 10\source\repos\QLSACH\QLSACH\obj\Debug\QLSACH.FrmThemSach.resources
 C:\Users\Window 10\source\repos\QLSACH\QLSACH\obj\Debug\QLSACH.FrmChiTietSach.resources
+C:\Users\Window 10\source\repos\QLSACH\QLSACH\obj\Debug\QLSACH.FrmSach.resources
+C:\Users\Window 10\source\repos\QLSACH\QLSACH\obj\Debug\QLSACH.FrmNhaXuatBan.resources
+C:\Users\Window 10\source\repos\QLSACH\QLSACH\obj\Debug\QLSACH.FrmThemNhaXuatBan.resources

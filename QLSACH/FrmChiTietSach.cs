@@ -13,6 +13,7 @@ namespace QLSACH
 {
     public partial class FrmChiTietSach : Form
     {
+        bool tinhTrang = false;
         string maSach;
         public FrmChiTietSach()
         {
@@ -78,26 +79,60 @@ namespace QLSACH
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            DataProvider dp = new DataProvider();
-            SqlParameter param = new SqlParameter();
-            param.ParameterName = "@HinhAnh";
-            param.Value = LopDungChung.anhSangByte(hinhAnh.Image);
-            string sql = "update SACH set TenSach =N'" + txtTenSach.Text + "',TacGia = N'" + txtTacGia.Text + "',MaNhaXuatBan ='" + cbNhaXuatBan.SelectedValue.ToString() + "',NgayXuatBan ='" + ngayXuatBan.Value.ToString() + "',MoTa = N'" + txtMoTa.Text + "',HinhAnh = @HinhAnh where MaSach ='"+maSach+"'";
-            dp.ExeNoQuery(sql, param);
+            if (txtTenSach.Text == "")
+            {
+                MessageBox.Show("Tên sách không được để trống");
+            }
+            else
+            {
+                if (ngayXuatBan.Value > DateTime.Now)
+                {
+                    MessageBox.Show("Ngày xuất bản không được lớn hơn ngày hiện tại");
+                }
+                else
+                {
+                    DataProvider dp = new DataProvider();
+                    SqlParameter param = new SqlParameter();
+                    param.ParameterName = "@HinhAnh";
+                    param.Value = LopDungChung.anhSangByte(hinhAnh.Image);
+                    string sql = "update SACH set TenSach =N'" + txtTenSach.Text + "',TacGia = N'" + txtTacGia.Text + "',MaNhaXuatBan ='" + cbNhaXuatBan.SelectedValue.ToString() + "',NgayXuatBan ='" + ngayXuatBan.Value.ToString() + "',MoTa = N'" + txtMoTa.Text + "',HinhAnh = @HinhAnh where MaSach ='" + maSach + "'";
+                    dp.ExeNoQuery(sql, param);
 
-            this.txtTenSach.ReadOnly = true;
-            this.txtTacGia.ReadOnly = true;
-            this.cbNhaXuatBan.Enabled = false;
-            this.lbTheLoai.Enabled = false;
-            this.txtMoTa.ReadOnly = true;
-            this.button1.Visible = false;
-            this.ngayXuatBan.Enabled = false;
+                    this.txtTenSach.ReadOnly = true;
+                    this.txtTacGia.ReadOnly = true;
+                    this.cbNhaXuatBan.Enabled = false;
+                    this.lbTheLoai.Enabled = false;
+                    this.txtMoTa.ReadOnly = true;
+                    this.button1.Visible = false;
+                    this.ngayXuatBan.Enabled = false;
+                    tinhTrang = true;
+
+                    MessageBox.Show("Sửa  thông tin sách thành công");
+                    this.Close();
+                }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.anh.ShowDialog();
-            this.hinhAnh.Image = Image.FromFile(anh.FileName);
+            anh.Filter = "Jpg file|*.jpg|Bmp file|*.bmp|jepg file|*.jepg|All file|*.*";
+            if (anh.ShowDialog() == DialogResult.OK)
+                hinhAnh.Image = Image.FromFile(anh.FileName);
+        }
+
+        private void btnDong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FrmChiTietSach_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!tinhTrang)
+            {
+                DialogResult rs = MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (rs == DialogResult.No)
+                    e.Cancel = true;
+            }
         }
     }
 }

@@ -36,7 +36,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
-            this.hinhAnh = new System.Windows.Forms.PictureBox();
             this.anh = new System.Windows.Forms.OpenFileDialog();
             this.button1 = new System.Windows.Forms.Button();
             this.lbTheLoai = new System.Windows.Forms.ListBox();
@@ -55,14 +54,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnDong = new System.Windows.Forms.Button();
+            this.hinhAnh = new System.Windows.Forms.PictureBox();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hinhAnh)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hinhAnh)).BeginInit();
             this.SuspendLayout();
             // 
             // label8
@@ -82,7 +83,7 @@
             this.panel7.Location = new System.Drawing.Point(17, 47);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(456, 45);
-            this.panel7.TabIndex = 10;
+            this.panel7.TabIndex = 0;
             // 
             // txtMaSach
             // 
@@ -124,14 +125,14 @@
             this.panel6.Location = new System.Drawing.Point(492, 276);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(395, 171);
-            this.panel6.TabIndex = 17;
+            this.panel6.TabIndex = 6;
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(532, 455);
+            this.btnLuu.Location = new System.Drawing.Point(400, 453);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(95, 34);
-            this.btnLuu.TabIndex = 21;
+            this.btnLuu.TabIndex = 9;
             this.btnLuu.Tag = "1";
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
@@ -142,21 +143,11 @@
             this.btnSua.Location = new System.Drawing.Point(225, 453);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(95, 34);
-            this.btnSua.TabIndex = 20;
+            this.btnSua.TabIndex = 8;
             this.btnSua.Tag = "1";
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // hinhAnh
-            // 
-            this.hinhAnh.Image = global::QLSACH.Properties.Resources.book;
-            this.hinhAnh.Location = new System.Drawing.Point(574, 49);
-            this.hinhAnh.Name = "hinhAnh";
-            this.hinhAnh.Size = new System.Drawing.Size(248, 189);
-            this.hinhAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.hinhAnh.TabIndex = 18;
-            this.hinhAnh.TabStop = false;
             // 
             // anh
             // 
@@ -168,7 +159,7 @@
             this.button1.Location = new System.Drawing.Point(633, 238);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(131, 32);
-            this.button1.TabIndex = 19;
+            this.button1.TabIndex = 7;
             this.button1.Tag = "1";
             this.button1.Text = "Chọn ảnh";
             this.button1.UseVisualStyleBackColor = true;
@@ -210,13 +201,14 @@
             this.panel5.Location = new System.Drawing.Point(17, 303);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(456, 144);
-            this.panel5.TabIndex = 16;
+            this.panel5.TabIndex = 5;
             // 
             // ngayXuatBan
             // 
             this.ngayXuatBan.Enabled = false;
             this.ngayXuatBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ngayXuatBan.Location = new System.Drawing.Point(140, 9);
+            this.ngayXuatBan.MaxDate = new System.DateTime(2018, 12, 25, 23, 59, 59, 0);
             this.ngayXuatBan.Name = "ngayXuatBan";
             this.ngayXuatBan.Size = new System.Drawing.Size(313, 26);
             this.ngayXuatBan.TabIndex = 0;
@@ -229,7 +221,7 @@
             this.panel4.Location = new System.Drawing.Point(17, 252);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(456, 45);
-            this.panel4.TabIndex = 14;
+            this.panel4.TabIndex = 4;
             // 
             // label5
             // 
@@ -269,12 +261,13 @@
             this.panel3.Location = new System.Drawing.Point(17, 201);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(456, 45);
-            this.panel3.TabIndex = 13;
+            this.panel3.TabIndex = 3;
             // 
             // txtTacGia
             // 
             this.txtTacGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTacGia.Location = new System.Drawing.Point(140, 7);
+            this.txtTacGia.MaxLength = 150;
             this.txtTacGia.Name = "txtTacGia";
             this.txtTacGia.ReadOnly = true;
             this.txtTacGia.Size = new System.Drawing.Size(313, 26);
@@ -298,12 +291,13 @@
             this.panel2.Location = new System.Drawing.Point(17, 150);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(456, 45);
-            this.panel2.TabIndex = 12;
+            this.panel2.TabIndex = 2;
             // 
             // txtTenSach
             // 
             this.txtTenSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenSach.Location = new System.Drawing.Point(140, 7);
+            this.txtTenSach.MaxLength = 150;
             this.txtTenSach.Name = "txtTenSach";
             this.txtTenSach.ReadOnly = true;
             this.txtTenSach.Size = new System.Drawing.Size(313, 26);
@@ -327,7 +321,7 @@
             this.panel1.Location = new System.Drawing.Point(17, 99);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(456, 45);
-            this.panel1.TabIndex = 11;
+            this.panel1.TabIndex = 1;
             // 
             // label1
             // 
@@ -340,11 +334,33 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Thêm mới sách";
             // 
+            // btnDong
+            // 
+            this.btnDong.Location = new System.Drawing.Point(574, 453);
+            this.btnDong.Name = "btnDong";
+            this.btnDong.Size = new System.Drawing.Size(95, 34);
+            this.btnDong.TabIndex = 10;
+            this.btnDong.Tag = "1";
+            this.btnDong.Text = "Đóng";
+            this.btnDong.UseVisualStyleBackColor = true;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
+            // 
+            // hinhAnh
+            // 
+            this.hinhAnh.Image = global::QLSACH.Properties.Resources.book;
+            this.hinhAnh.Location = new System.Drawing.Point(574, 49);
+            this.hinhAnh.Name = "hinhAnh";
+            this.hinhAnh.Size = new System.Drawing.Size(248, 189);
+            this.hinhAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.hinhAnh.TabIndex = 18;
+            this.hinhAnh.TabStop = false;
+            // 
             // FrmChiTietSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(904, 501);
+            this.Controls.Add(this.btnDong);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.btnLuu);
@@ -358,13 +374,14 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Name = "FrmChiTietSach";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmChiTietSach";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmChiTietSach_FormClosing);
             this.Load += new System.EventHandler(this.FrmChiTietSach_Load);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hinhAnh)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -375,6 +392,7 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hinhAnh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -409,5 +427,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnDong;
     }
 }

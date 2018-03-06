@@ -83,6 +83,24 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmNhaXuatBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNhaXuatBan.Designer.cs">
+      <DependentUpon>FrmNhaXuatBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSach.Designer.cs">
+      <DependentUpon>FrmSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmThemNhaXuatBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThemNhaXuatBan.Designer.cs">
+      <DependentUpon>FrmThemNhaXuatBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmThemSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +115,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNhaXuatBan.resx">
+      <DependentUpon>FrmNhaXuatBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSach.resx">
+      <DependentUpon>FrmSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThemNhaXuatBan.resx">
+      <DependentUpon>FrmThemNhaXuatBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmThemSach.resx">
       <DependentUpon>FrmThemSach.cs</DependentUpon>

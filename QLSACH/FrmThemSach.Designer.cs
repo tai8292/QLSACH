@@ -46,7 +46,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.anh = new System.Windows.Forms.OpenFileDialog();
-            this.hinhAnh = new System.Windows.Forms.PictureBox();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnNhapLai = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -55,14 +54,16 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.txtMaSach = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnDong = new System.Windows.Forms.Button();
+            this.hinhAnh = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hinhAnh)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hinhAnh)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -89,6 +90,7 @@
             // 
             this.txtTenSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenSach.Location = new System.Drawing.Point(140, 7);
+            this.txtTenSach.MaxLength = 150;
             this.txtTenSach.Name = "txtTenSach";
             this.txtTenSach.Size = new System.Drawing.Size(313, 26);
             this.txtTenSach.TabIndex = 0;
@@ -117,6 +119,7 @@
             // 
             this.txtTacGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTacGia.Location = new System.Drawing.Point(140, 7);
+            this.txtTacGia.MaxLength = 150;
             this.txtTacGia.Name = "txtTacGia";
             this.txtTacGia.Size = new System.Drawing.Size(313, 26);
             this.txtTacGia.TabIndex = 0;
@@ -241,19 +244,9 @@
             // 
             this.anh.FileName = "anh";
             // 
-            // hinhAnh
-            // 
-            this.hinhAnh.Image = global::QLSACH.Properties.Resources.book;
-            this.hinhAnh.Location = new System.Drawing.Point(569, 45);
-            this.hinhAnh.Name = "hinhAnh";
-            this.hinhAnh.Size = new System.Drawing.Size(248, 189);
-            this.hinhAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.hinhAnh.TabIndex = 6;
-            this.hinhAnh.TabStop = false;
-            // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(277, 449);
+            this.btnThem.Location = new System.Drawing.Point(231, 449);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(95, 34);
             this.btnThem.TabIndex = 8;
@@ -264,7 +257,7 @@
             // 
             // btnNhapLai
             // 
-            this.btnNhapLai.Location = new System.Drawing.Point(497, 449);
+            this.btnNhapLai.Location = new System.Drawing.Point(400, 449);
             this.btnNhapLai.Name = "btnNhapLai";
             this.btnNhapLai.Size = new System.Drawing.Size(95, 34);
             this.btnNhapLai.TabIndex = 9;
@@ -317,6 +310,7 @@
             // 
             this.txtMaSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaSach.Location = new System.Drawing.Point(140, 7);
+            this.txtMaSach.MaxLength = 10;
             this.txtMaSach.Name = "txtMaSach";
             this.txtMaSach.Size = new System.Drawing.Size(313, 26);
             this.txtMaSach.TabIndex = 1;
@@ -332,11 +326,33 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Mã sách : ";
             // 
+            // btnDong
+            // 
+            this.btnDong.Location = new System.Drawing.Point(569, 449);
+            this.btnDong.Name = "btnDong";
+            this.btnDong.Size = new System.Drawing.Size(95, 34);
+            this.btnDong.TabIndex = 10;
+            this.btnDong.Tag = "1";
+            this.btnDong.Text = "Đóng";
+            this.btnDong.UseVisualStyleBackColor = true;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click_1);
+            // 
+            // hinhAnh
+            // 
+            this.hinhAnh.Image = global::QLSACH.Properties.Resources.book;
+            this.hinhAnh.Location = new System.Drawing.Point(569, 45);
+            this.hinhAnh.Name = "hinhAnh";
+            this.hinhAnh.Size = new System.Drawing.Size(248, 189);
+            this.hinhAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.hinhAnh.TabIndex = 6;
+            this.hinhAnh.TabStop = false;
+            // 
             // FrmThemSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(904, 505);
+            this.Controls.Add(this.btnDong);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.btnNhapLai);
@@ -353,6 +369,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Tag = "1";
             this.Text = "FrmThemSach";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmThemSach_FormClosing);
             this.Load += new System.EventHandler(this.FrmThemSach_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -364,11 +381,11 @@
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hinhAnh)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hinhAnh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -403,5 +420,6 @@
         private System.Windows.Forms.ListBox lbTheLoai;
         private System.Windows.Forms.TextBox txtMoTa;
         private System.Windows.Forms.TextBox txtMaSach;
+        private System.Windows.Forms.Button btnDong;
     }
 }
