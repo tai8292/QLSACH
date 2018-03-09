@@ -52,5 +52,11 @@ namespace QLSACH
             FrmNhaXuatBan f = new FrmNhaXuatBan();
             nhungForm(f);
         }
+
+        private void thểLoạiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTheLoai f = new FrmTheLoai();
+            nhungForm(f);
+        }
     }
 }

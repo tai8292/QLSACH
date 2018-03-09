@@ -208,7 +208,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FrmThemNhaXuatBan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmThemNhaXuatBan";
+            this.Text = "Them Nha Xuat Ban";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmThemNhaXuatBan_FormClosing);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();

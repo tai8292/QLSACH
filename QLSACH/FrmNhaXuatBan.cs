@@ -90,5 +90,20 @@ namespace QLSACH
                 }
             }
         }
+
+        private void txt_giatri_TextChanged(object sender, EventArgs e)
+        {
+            string giaTri = txt_giatri.Text;
+            if (txt_giatri.Text == "")
+            {
+                loadFrom();
+            }
+            else
+            {
+                DataProvider dp = new DataProvider();
+                string sql = "select * from NHAXUATBAN where MaNhaXuatBan like '%" +giaTri+ "%' or TenNhaXuatBan like '%" +giaTri+ "%' or Sdt like '%" +giaTri+ "%' or DiaChi like '%" +giaTri+ "%'";
+                this.dgNhaXuatBan.DataSource = dp.GetDataTable(sql);
+            }
+        }
     }
 }

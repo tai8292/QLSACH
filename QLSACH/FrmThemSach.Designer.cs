@@ -368,7 +368,7 @@
             this.Name = "FrmThemSach";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Tag = "1";
-            this.Text = "FrmThemSach";
+            this.Text = "Them Sach";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmThemSach_FormClosing);
             this.Load += new System.EventHandler(this.FrmThemSach_Load);
             this.panel1.ResumeLayout(false);

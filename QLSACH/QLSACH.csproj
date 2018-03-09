@@ -95,6 +95,12 @@
     <Compile Include="FrmSach.Designer.cs">
       <DependentUpon>FrmSach.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmTheLoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTheLoai.Designer.cs">
+      <DependentUpon>FrmTheLoai.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmThemNhaXuatBan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,12 @@
     </Compile>
     <Compile Include="FrmThemSach.Designer.cs">
       <DependentUpon>FrmThemSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ThemTheLoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ThemTheLoai.Designer.cs">
+      <DependentUpon>frm_ThemTheLoai.cs</DependentUpon>
     </Compile>
     <Compile Include="LopDungChung.cs" />
     <Compile Include="Program.cs" />
@@ -122,11 +134,17 @@
     <EmbeddedResource Include="FrmSach.resx">
       <DependentUpon>FrmSach.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmTheLoai.resx">
+      <DependentUpon>FrmTheLoai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmThemNhaXuatBan.resx">
       <DependentUpon>FrmThemNhaXuatBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmThemSach.resx">
       <DependentUpon>FrmThemSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ThemTheLoai.resx">
+      <DependentUpon>frm_ThemTheLoai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

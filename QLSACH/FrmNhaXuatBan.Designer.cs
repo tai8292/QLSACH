@@ -37,8 +37,8 @@
             this.Sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtMaNhaXuatBan = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtTenNhaXuatBan = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,6 +49,8 @@
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
+            this.txt_giatri = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgNhaXuatBan)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -61,7 +63,7 @@
             this.lbTieuDe.AutoSize = true;
             this.lbTieuDe.Font = new System.Drawing.Font("Tahoma", 25F, System.Drawing.FontStyle.Bold);
             this.lbTieuDe.ForeColor = System.Drawing.Color.Blue;
-            this.lbTieuDe.Location = new System.Drawing.Point(112, 3);
+            this.lbTieuDe.Location = new System.Drawing.Point(262, 9);
             this.lbTieuDe.Name = "lbTieuDe";
             this.lbTieuDe.Size = new System.Drawing.Size(430, 41);
             this.lbTieuDe.TabIndex = 23;
@@ -98,10 +100,10 @@
             this.TenNhaXuatBan,
             this.Sdt,
             this.DiaChi});
-            this.dgNhaXuatBan.Location = new System.Drawing.Point(15, 47);
+            this.dgNhaXuatBan.Location = new System.Drawing.Point(15, 116);
             this.dgNhaXuatBan.Name = "dgNhaXuatBan";
             this.dgNhaXuatBan.RowHeadersWidth = 30;
-            this.dgNhaXuatBan.Size = new System.Drawing.Size(611, 467);
+            this.dgNhaXuatBan.Size = new System.Drawing.Size(611, 398);
             this.dgNhaXuatBan.TabIndex = 0;
             this.dgNhaXuatBan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgNhaXuatBan_CellClick);
             // 
@@ -133,20 +135,10 @@
             // 
             this.panel1.Controls.Add(this.txtMaNhaXuatBan);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(632, 116);
+            this.panel1.Location = new System.Drawing.Point(635, 179);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(260, 68);
             this.panel1.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Mã NXB :";
             // 
             // txtMaNhaXuatBan
             // 
@@ -158,11 +150,21 @@
             this.txtMaNhaXuatBan.Size = new System.Drawing.Size(247, 26);
             this.txtMaNhaXuatBan.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Mã NXB :";
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.txtTenNhaXuatBan);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(632, 190);
+            this.panel2.Location = new System.Drawing.Point(632, 244);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(260, 68);
             this.panel2.TabIndex = 3;
@@ -190,7 +192,7 @@
             // 
             this.panel3.Controls.Add(this.txtSdt);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(632, 264);
+            this.panel3.Location = new System.Drawing.Point(632, 309);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(260, 68);
             this.panel3.TabIndex = 4;
@@ -218,7 +220,7 @@
             // 
             this.panel4.Controls.Add(this.txtDiaChi);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(632, 338);
+            this.panel4.Location = new System.Drawing.Point(632, 374);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(260, 68);
             this.panel4.TabIndex = 5;
@@ -253,18 +255,39 @@
             this.btnThem.Appearance.Options.UseBorderColor = true;
             this.btnThem.Appearance.Options.UseFont = true;
             this.btnThem.Appearance.Options.UseForeColor = true;
-            this.btnThem.Location = new System.Drawing.Point(676, 47);
+            this.btnThem.Location = new System.Drawing.Point(684, 116);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(168, 55);
             this.btnThem.TabIndex = 1;
             this.btnThem.Text = "Thêm mới sách";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
+            // txt_giatri
+            // 
+            this.txt_giatri.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_giatri.Location = new System.Drawing.Point(99, 70);
+            this.txt_giatri.Name = "txt_giatri";
+            this.txt_giatri.Size = new System.Drawing.Size(527, 26);
+            this.txt_giatri.TabIndex = 36;
+            this.txt_giatri.TextChanged += new System.EventHandler(this.txt_giatri_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(12, 70);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(81, 20);
+            this.label5.TabIndex = 35;
+            this.label5.Text = "Tìm Kiếm";
+            // 
             // FrmNhaXuatBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(904, 517);
+            this.Controls.Add(this.txt_giatri);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -275,7 +298,7 @@
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.dgNhaXuatBan);
             this.Name = "FrmNhaXuatBan";
-            this.Text = "FrmNhaXuatBan";
+            this.Text = "Nha Xuat Ban";
             this.Load += new System.EventHandler(this.FrmNhaXuatBan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgNhaXuatBan)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -314,5 +337,7 @@
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.Label label4;
         private DevExpress.XtraEditors.SimpleButton btnThem;
+        private System.Windows.Forms.TextBox txt_giatri;
+        private System.Windows.Forms.Label label5;
     }
 }

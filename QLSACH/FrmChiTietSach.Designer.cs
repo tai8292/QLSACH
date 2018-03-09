@@ -375,7 +375,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmChiTietSach";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmChiTietSach";
+            this.Text = "Chi Tiet Sach";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmChiTietSach_FormClosing);
             this.Load += new System.EventHandler(this.FrmChiTietSach_Load);
             this.panel7.ResumeLayout(false);

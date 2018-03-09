@@ -65,3 +65,5 @@ C:\Users\Window 10\source\repos\QLSACH\QLSACH\obj\Debug\QLSACH.FrmChiTietSach.re
 C:\Users\Window 10\source\repos\QLSACH\QLSACH\obj\Debug\QLSACH.FrmSach.resources
 C:\Users\Window 10\source\repos\QLSACH\QLSACH\obj\Debug\QLSACH.FrmNhaXuatBan.resources
 C:\Users\Window 10\source\repos\QLSACH\QLSACH\obj\Debug\QLSACH.FrmThemNhaXuatBan.resources
+C:\Users\Window 10\source\repos\QLSACH\QLSACH\obj\Debug\QLSACH.FrmTheLoai.resources
+C:\Users\Window 10\source\repos\QLSACH\QLSACH\obj\Debug\QLSACH.frm_ThemTheLoai.resources

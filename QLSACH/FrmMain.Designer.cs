@@ -42,7 +42,7 @@
             this.pnMain.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pnMain.Location = new System.Drawing.Point(12, 30);
             this.pnMain.Name = "pnMain";
-            this.pnMain.Size = new System.Drawing.Size(920, 531);
+            this.pnMain.Size = new System.Drawing.Size(920, 566);
             this.pnMain.TabIndex = 0;
             // 
             // menuStrip1
@@ -77,18 +77,19 @@
             this.thểLoạiToolStripMenuItem.Name = "thểLoạiToolStripMenuItem";
             this.thểLoạiToolStripMenuItem.Size = new System.Drawing.Size(68, 23);
             this.thểLoạiToolStripMenuItem.Text = "&Thể loại";
+            this.thểLoạiToolStripMenuItem.Click += new System.EventHandler(this.thểLoạiToolStripMenuItem_Click);
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(944, 562);
+            this.ClientSize = new System.Drawing.Size(944, 608);
             this.Controls.Add(this.pnMain);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmMain";
+            this.Text = "Menu";
             this.Load += new System.EventHandler(this.FrmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pnMain)).EndInit();
             this.menuStrip1.ResumeLayout(false);

@@ -79,5 +79,20 @@ namespace QLSACH
                 frmLoad();
             }
         }
+
+        private void txtGiaTriTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            string giaTri = txtGiaTriTimKiem.Text;
+            if (giaTri != "")
+            {
+                DataProvider dp = new DataProvider();
+                string sql = "select MaSach,TenSach,TacGia,HinhAnh from SACH where MaSach like '%" + giaTri + "%' or TenSach like '%" + giaTri + "%' or TacGia like '%"+giaTri+"%'";
+                this.dgSach.DataSource = dp.GetDataTable(sql);
+            }
+            else
+            {
+                frmLoad();
+            }
+        }
     }
 }
